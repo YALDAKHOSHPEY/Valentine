@@ -1,0 +1,210 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffccd5;
+    color: #333;
+    animation: backgroundAnimation 10s linear infinite;
+    transition: background-color 0.5s ease-in-out;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-color: #ffccd5; }
+    50% { background-color: #ff8aa4; }
+    100% { background-color: #ffccd5; }
+}
+
+nav {
+    width: 100%;
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: popIn 2s ease-in-out;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+#comic-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#character {
+    max-width: 300px;
+    height: auto;
+    border: 5px solid #ffc107;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+#speech-bubble {
+    background-color: white;
+    border: 2px solid #e91e63;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+    max-width: 400px;
+    font-size: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+#chat-box {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f06292;
+    padding: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: buttonAnimation 3s infinite ease-in-out;
+}
+
+button:hover {
+    background-color: #ff6090;
+    transform: translateY(-2px);
+}
+
+@keyframes buttonAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+#input-message {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #e91e63;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: border-color 0.3s;
+}
+
+#input-message:focus {
+    border-color: #ff6090;
+}
+
+#summary-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#summary p {
+    margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    #character {
+        max-width: 200px;
+    }
+    #speech-bubble {
+        font-size: 1.2em;
+    }
+    button, #input-message {
+        font-size: 1em;
+    }
+    #chat-box {
+        padding: 5px;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+table thead tr {
+    background-color: #f06292;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:hover {
+    background-color: #f06292;
+    color: white;
+}
+

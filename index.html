@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1>🤪Our romantic Adventure🤪</h1>
+        </div>
+    </nav>
+    <div id="comic-container">
+        <img id="character" src="download.jpeg" alt="Character">
+        <div id="speech-bubble"></div>
+    </div>
+
+    <div id="chat-box">
+    <div id="options" style="display: none;"></div>
+    <input type="text" id="input-message" placeholder="Type your message here...">
+</div>
+<div id="summary-container" style="display: none;">
+    <h2>My message based on your choices</h2>
+    <div id="summary"></div>
+    <H2>📸📸Please take a screenshot and send it to me!</H2>
+    <h3>Because I'm <span style="color: maroon;">Nosy</span> haha. Answer the questions and submit to have my voice displayed to you and let it finish to see the magic😘❤️🌷</h3>
+    <h4>Scroll down after submitting answers⬇️⬇️⬇️</h4>
+    <button onclick="restartStory()">Restart</button>
+</div>
+<div id="psychological-questions" style="display: none;">
+    <h2>Personality Questions</h2>
+    <p>1. When we're facing a tough time in our relationship, how do you usually cope or react?</p>
+    <input type="text" placeholder="Type your answer here...">
+    
+    <p>2. If you could change one thing about how we communicate, what would it be?</p>
+    <input type="text" placeholder="Type your answer here...">
+    
+    <p>3. What moments with me bring you the most joy, even from afar?</p>
+    <input type="text" placeholder="Type your answer here...">
+    
+    <p>4.you told me you hate waiting.don't you regret waiting for me?</p>
+    <input type="text" placeholder="Type your answer here...">
+
+    <p>5.What do you like most about me and what do you hate?</p>
+    <input type="text" placeholder="Type your answer here...">
+    <button onclick="submitPsychologicalAnswers()">Submit Answers</button>
+</div>
+<div id="end-audio-container" style="display: none;">
+    <h2>Special Message</h2>
+    <audio controls id="end-audio">
+        <source src="endMessage.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+<audio id="click-sound" src="click.mp3" preload="auto"></audio>
+<script src="script.js"></script>
+</body>
+</html>
